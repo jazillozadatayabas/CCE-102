@@ -1,0 +1,55 @@
+//TAYABAS, JAZIL L.
+package assignment2;
+import java.util.Scanner;
+public class Assignment2
+{
+    public static void main(String[] args)
+    {
+       Scanner in = new Scanner(System.in);
+       
+        System.out.println("INPUT GRADE: ");
+            int grade = in.nextInt();
+           if(grade >= 95 && grade <=100)
+           {
+                System.out.println(grade +" - EXCELLENT");
+           }
+           else if (grade >=85 && grade <= 90)
+           {
+               System.out.println(grade + " - GOOD");
+           }
+           else if (grade <= 84 && grade >= 80)
+           {
+               System.out.println(grade + " - APPROACHING");
+           }
+           else if (grade >= 75 && grade <= 79)
+           {
+               System.out.println(grade + " - NEEDS IMPROVEMENT");
+           }
+           else if (grade <= 74)
+           {
+               System.out.println(grade + " - POOR");
+           }    
+           else if (grade > 100)
+           {
+                System.out.println(grade + " - INVALID INPUT!");
+            }
+            
+//assignment #2
+            
+               System.out.println("\nFirst Number: ");  
+               int num1 = in.nextInt();
+               System.out.println("\nSecond Number: ");
+               int num2 = in.nextInt();
+               
+            if (num1 < num2)
+            {
+               System.out.println("\nThe product is " + num1 * num2);
+            }
+            else if (num1 == num2)
+            {
+                System.out.println("\nThe sum is " + (num1 + num2));
+            }
+            else if (num1 > num2)
+                System.out.println("\nThe quotient is " + (num1/num2) + "\nThe modulum is " + (num1 % num2));
+            }
+  }
