@@ -1,0 +1,44 @@
+package Jazil;
+
+import java.util.Scanner;
+
+public class Jazil 
+{
+    public Jazil ( )
+    {  
+        Scanner input = new Scanner(System.in);
+              
+        System.out.print("Enter weight in pounds:");
+        double weight = input.nextDouble();
+        System.out.print("Enter height in inches:");
+        double height = input.nextDouble();
+              
+        weight = weight * 0.45359237;
+        height = height * 0.0254;
+              
+        //compute
+        double BMI = weight / (height * height);
+              
+        System.out.printf("BMI is %.4f", BMI);
+        
+        //declare
+        String employeesID;
+       
+        System.out.print("Employees ID :     ");
+        employeesID = input. next();
+        System.out.print("Input the working hours:     ");
+        double workingHours = input.nextDouble();
+        System.out.print("Salary amount/hour: Php.    ");
+        double salaryAmount = input.nextDouble();
+        
+        //compute
+        double salary = workingHours * salaryAmount;
+        
+        System.out.println("Employees ID =  " + employeesID);
+        System.out.printf("Salary = Php %.2f", salary);
+     } 
+    public static void main(String[] args)
+    {
+      new Jazil();
+      }       
+}
