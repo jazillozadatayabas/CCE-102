@@ -1,0 +1,143 @@
+package assignment3;
+import java.util.Scanner;
+public class Assignment3 
+{
+  public static void main(String[] args) 
+  {
+      Scanner in = new Scanner (System.in);
+      //number1
+      int itemNumber;
+      double money, price = 0;
+      System.out.println("Enter an item number and a sum of money: ");
+      itemNumber = in.nextInt();
+      money = in.nextDouble();
+      double mon =0;
+      
+      switch(itemNumber)
+      {
+         case 1:
+            price = 1.25; 
+             mon =  money - price;
+            if (mon <0)
+            {
+                double lack = price - money;
+                 System.out.printf("Please insert another $%.2f", lack);
+            }
+            else
+            {
+                 System.out.printf("Thank you for buying item 1. Your change is $ %.2f", mon );
+             }
+            break;
+            
+         case 2:
+            price = 0.75;
+              mon =  money - price;
+            if (mon <0)
+            {
+                double lack = price - money;
+                 System.out.printf("Please insert another $%.2f", lack);
+            }
+            else
+            {
+                 System.out.printf("Thank you for buying item 2. Your change is $ %.2f", mon );
+             }            
+             break;
+            
+         case 3:
+            price = 0.90;
+            mon =  money - price;
+            if (mon <0)
+            {
+                double lack = price - money;
+                 System.out.printf("Please insert another $%.2f", lack);
+            }
+            else
+            {
+                 System.out.printf("Thank you for buying item 3. Your change is $ %.2f", mon );
+             }
+            break;
+            
+         case 4:
+            price = 0.75;
+             mon =  money - price;
+            if (mon <0)
+            {
+                double lack = price - money;
+                 System.out.printf("Please insert another $%.2f", lack);
+            }
+            else
+            {
+                 System.out.printf("Thank you for buying item 4. Your change is $ %.2f", mon );
+             }
+            break;
+            
+         case 5:
+            price = 1.50;
+             mon =  money - price;
+            if (mon <0)
+            {
+                double lack = price - money;
+                 System.out.printf("Please insert another $%.2f", lack);
+            }
+            else
+            {
+                 System.out.printf("Thank you for buying item 5. Your change is $ %.2f", mon );
+             }
+            break;
+            
+         case 6:
+            price = 0.75;
+             mon =  money - price;
+            if (mon <0)
+            {
+                double lack = price - money;
+                 System.out.printf("Please insert another $%.2f", lack);
+            }
+            else
+            {
+                 System.out.printf("Thank you for buying item 6. Your change is $ %.2f", mon );
+             }
+            break;
+            
+         default:
+            System.out.println("Invalid Input!");
+    }
+           
+      
+      //number2
+      double balance = 5432;
+      double withdraw, deposit, newBalance;
+      System.out.println("\n\nWelcome! Enter the number of your transaction");   
+      System.out.println("Withdraw cash: 1");   
+      System.out.println("Make a deposit: 2");   
+      System.out.println("Check your balance: 3");   
+      System.out.println("Exit: 4");   
+      System.out.println("___________________");   
+      System.out.print("Transaction number: ");   
+      double transNum = in.nextDouble();    
+       
+      if (transNum == 1)
+      {
+           System.out.println("Enter amount of cash to be withdrawn: ");  
+           withdraw = in.nextDouble();      
+                    double newbalance = balance - withdraw;
+                    System.out.println("Your remaining balance is $" + newbalance) ;
+       }
+      else if(transNum == 2) 
+      {
+            System.out.println("Enter amount of deposit: "); 
+            deposit = in.nextDouble();   
+                   double newbalance = deposit + balance;
+                   System.out.println("Your new balance is $" + newbalance);
+        }
+       else if (transNum == 3)  
+       {
+            System.out.println("Your balance is $" + balance);
+        }
+        else if (transNum == 4)
+        {
+            System.out.println("Close");
+            System.exit(0);
+        }
+  }
+}
