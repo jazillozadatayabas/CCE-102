@@ -1,0 +1,94 @@
+package assignment4;
+import java.util.Scanner;
+public class Assignment4
+{ 
+  public static void main(String[] args) 
+  {
+       Scanner in = new Scanner (System.in);
+    //number1
+      System.out.print("Enter a hex digit: ");
+      String hexString = in.nextLine();
+    
+      char character = hexString.charAt(0);
+      
+      if((character <= 'F' && character >= 'A') || (character <= '9' && character >= '0' ))
+         {
+            System.out.print("The binary value is ");
+          }
+      switch(character)
+         {
+             case '0':
+                   System.out.println("0000");
+                   break;
+             case '1':
+                   System.out.println("0001");
+                   break;
+             case '2':
+                    System.out.println("0010");
+                    break;
+             case '3':
+                    System.out.println("0011");
+                    break; 
+              case '4':
+                   System.out.println("0100");
+                   break;
+             case '5':
+                   System.out.println("0101");
+                   break;
+             case '6':
+                    System.out.println("0110");
+                    break;
+             case '7':
+                    System.out.println("0111");
+                    break; 
+              case '8':
+                   System.out.println("1000");
+                   break;
+             case '9':
+                   System.out.println("1001");
+                   break;
+             case 'A':
+                    System.out.println("1010");
+                    break;
+             case 'B':
+                    System.out.println("1011");
+                    break; 
+              case 'C':
+                   System.out.println("1100");
+                   break;
+             case 'D':
+                   System.out.println("1101");
+                   break;
+             case 'E':
+                    System.out.println("1110");
+                    break;
+             case 'F':
+                    System.out.println("1111");
+                    break;   
+             default:        
+                    System.out.println(hexString + " is an invalid input");
+         }
+ 
+    
+     //number2
+       String number1, number2, number3, numberInput;
+       
+       System.out.println("Input: ");
+       numberInput = in.nextLine();
+       
+       if(numberInput.length() <= 10)
+       {
+           number1=numberInput.charAt(0) + "" + numberInput.charAt(1) + "" + numberInput.charAt(2) ;
+           number2=numberInput.charAt(3) + "" + numberInput.charAt(4) + "" + numberInput.charAt(5) ;
+           number3=numberInput.charAt(6) + "" + numberInput.charAt(7) + "" + numberInput.charAt(8) + "" + numberInput.charAt(9) ;
+              if ((number1.equals("800")) || (number1.equals("888")) || (number1.equals("877")) || (number1.equals("866"))) 
+                   {
+                          System.out.print(number1 + "-" + number2 + "-" + number3 + " is a toll-free number.");
+                    }
+              else
+                   {
+                          System.out.println(number1 + "-" + number2 + "-" + number3 + " is not  a toll-free number.");
+                   } 
+         }
+  }
+}
